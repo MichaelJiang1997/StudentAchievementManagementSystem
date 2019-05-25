@@ -1,5 +1,6 @@
 # StudentAchievementManagementSystem
-学生成绩管理系统（作业）
+**学生成绩管理系统(作业)**
+
 ![icon](doc/20190524223051.png)
 ![icon](doc/20190524223118.png)
 ![icon](doc/20190524223150.png)
