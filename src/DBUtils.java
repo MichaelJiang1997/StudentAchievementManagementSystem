@@ -1,20 +1,25 @@
-package Ñ§Éú³É¼¨¹ÜÀíÏµÍ³;
+package å­¦ç”Ÿæˆç»©ç®¡ç†ç³»ç»Ÿ;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBUtils {
+	
 	 static Connection con;
+	 public static String USER_NAME = "root"; 
+	 public static String PASSWORD = "root"; 
+	 public static String URL = "jdbc:mysql://sencom.top:3306/xscjglxt?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&useSSL=true";
+	 
 	 static public Connection getConnection() {
 	        try {
 	            Class.forName("com.mysql.cj.jdbc.Driver");
 	        } catch (ClassNotFoundException e) {
-	            // TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+	            // TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 	            e.printStackTrace();
 	        }
 	        try {
-	        	con = DriverManager.getConnection("jdbc:mysql://sencom.top:3306/xscjglxt?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&useSSL=true", "anyone", "123456");
+	        	con = DriverManager.getConnection(URL, USER_NAME, PASSWORD);
 	        }catch(SQLException e) {
 	            e.printStackTrace();
 	        }
